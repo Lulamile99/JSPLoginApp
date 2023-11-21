@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="submit.jsp" method="get">
+	<form action=<%=request.getContextPath()%>/Controller method="post">
 		First Name : <input type="text" name="firstName"><br/>
 		Second Name : <input type="text" name="secondName"><br/>
 		Date Of Birth :<input type="date" placeholder="dd-mm-yyyy" name="dateOfBirth"><br/>
