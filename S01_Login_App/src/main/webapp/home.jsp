@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Welcome <%=request.getParameter("email") %>
+	Welcome <%=request.getParameter("email") %> !!!
 </body>
 </html>

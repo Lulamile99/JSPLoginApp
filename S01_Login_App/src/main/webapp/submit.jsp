@@ -12,6 +12,16 @@
 	Gender: <%= request.getParameter("gender")%><br/>
 	Country Of Birth: <%= request.getParameter("country")%><br/>
 	Cell Phone Number : <%= request.getParameter("number")%><br/>
-	Email: <%= request.getParameter("email")%>
+	Languages You Know: <%
+							String[] languages = request.getParameterValues("language");
+							if(languages!=null){
+								for(String l:languages){
+									out.print("<br/>");
+									out.println(l);
+								}
+							}
+						%>
+						<br/>
+		Email: <%= request.getParameter("email")%>
 </body>
 </html>
