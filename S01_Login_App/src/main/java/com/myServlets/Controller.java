@@ -20,7 +20,21 @@ public class Controller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().println(request.getParameter("firstName")+" "+request.getParameter("secondName"));
+		response.getWriter().println(request.getParameter("dateOfBirth"));
+		response.getWriter().println(request.getParameter("gender"));
+		response.getWriter().println(request.getParameter("country"));
+		response.getWriter().println(request.getParameter("number"));
+		String[] languages = request.getParameterValues("language");
+			if(languages!=null){
+				for(String l:languages){
+					response.getWriter().println(l);
+				}
+			}
+			else {
+				response.getWriter().println("None Found");
+			}
+		response.getWriter().println(request.getParameter("email"));
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

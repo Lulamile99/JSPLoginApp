@@ -5,15 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
-	<form action=<%=request.getContextPath()%>/Controller method="post">
-		First Name : <input type="text" name="firstName"><br/>
-		Second Name : <input type="text" name="secondName"><br/>
-		Date Of Birth :<input type="date" placeholder="dd-mm-yyyy" name="dateOfBirth"><br/>
-		Gender: <input type="radio" name="gender" value="male">Male
+	<form action=<%=request.getContextPath()%>/Controller method="get">
+		First Name : <input type="text" name="firstName" required><br/>
+		Second Name : <input type="text" name="secondName" required><br/>
+		Date Of Birth :<input type="date" placeholder="dd-mm-yyyy" name="dateOfBirth" required><br/>
+		Gender: <input type="radio" name="gender" value="male" checked>Male
 				<input type="radio" name="gender" value="Female">Female
-				<input type="radio" name="gender" value="other">Other<br/>
+				<input type="radio" name="gender" value="other">Other<br/> 
 		Country Of Birth:<select name="country">
 						<option value="South Africa">South Africa</option>
 						<option value="India">India</option>
@@ -31,12 +31,12 @@
 						<option value="Uruguay">Uruguay</option>
 						<option value="Colombia">Colombia</option>
 						</select><br/>
-		Cell Phone Number : <input type="text" name="number"><br/>
+		Cell Phone Number : <input type="text" name="number" required><br/>
 		Languages You Know :<input type="checkbox" name="language" value="Isixhosa">Isixhosa
 							<input type="checkbox" name="language" value="English">English
 							<input type="checkbox" name="language" value="Afrikaans">Afrikaans<br/>
-		Email : <input type="email" name="email"><br/>
-		Password : <input type="password" name="password"><br/>
+		Email : <input type="email" name="email" required><br/>
+		Password : <input type="password" name="password" required><br/>
 		<input type="submit" name="Submit">
 		
 	</form>
